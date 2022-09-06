@@ -1,0 +1,20 @@
+version: '3'
+
+# Aca van las imagenes/contenedores que vamos a crear
+services:
+# Aca va mi contenedor de node
+  node: #Este nombre se lo puse yo, aca puede ponerse cualquier otro
+    container_name: nodecontainer
+    restart: always
+    build: . #Quiero que construyas a partir del directorio actual
+    ports:
+      - "5000:8085"
+    links:
+      - mongo #Vinculo el container de node con el container de mongo
+    volumes:
+      - .:/usr/src/app #Es como un nodemon, cualquier cosa que escriba en mi proyecto, se va a copiar en los contenedores de docker
+  mongo:
+    container_name: mongocontainer
+    image: mongo #En que imagen se va a basar para crear la imagen/contenedor
+    ports:
+      - "27018:27017"

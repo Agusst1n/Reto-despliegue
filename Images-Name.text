@@ -1,0 +1,25 @@
+
+#2)Un archivo TXT con los nombres de las imágenes publicadas en Dockerhub.
+
+
+Mongo:
+
+  #Link
+  https://hub.docker.com/repository/docker/agustincode/mongo
+
+  #Image name
+  name: agustincode/mongo
+  
+  #Image pull command:
+  docker pull agustincode/mongo:database
+  
+Node: 
+
+  #Link
+  https://hub.docker.com/repository/docker/agustincode/node
+  
+  #Image name
+  name: agustincode/node
+  
+  #Image pull command:
+  docker pull agustincode/node:backend
